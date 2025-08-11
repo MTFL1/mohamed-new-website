@@ -63,9 +63,9 @@ const HeroSection = () => {
         {/* Points forts */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
           {[
-            "Design moderne & responsive",
-            "Hébergement & nom de domaine inclus",
-            "Mises à jour régulières",
+            "Hébergement inclus",
+            "Économie",
+            "Tranquillité d’esprit",
           ].map((point, idx) => (
             <motion.div
               key={idx}

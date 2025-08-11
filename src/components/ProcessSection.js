@@ -31,10 +31,10 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section id="fonctionnement" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="fonctionnement" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Comment ça fonctionne ?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -77,13 +77,13 @@ const ProcessSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-600 max-w-3xl mx-auto mb-6">
+          <p className="text-white max-w-3xl mx-auto mb-6">
             <strong>Démarrage rapide :</strong> Votre site peut être en ligne en moins de 2 semaines. 
             Ensuite, profitez d'un service de maintenance sans souci.
           </p>
           <button 
             onClick={() => window.open('https://calendly.com/placeholder', '_blank')}
-            className="bg-black text-white px-8 py-3 rounded-lg hover:bg-green-500 transition-colors duration-300 inline-flex items-center"
+            className="bg-white text-black px-8 py-3 rounded-lg hover:bg-green-500 hover:text-white transition-colors duration-300 inline-flex items-center"
           >
             Commencer maintenant
             <MessageCircle className="w-5 h-5 ml-2" />

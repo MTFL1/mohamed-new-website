@@ -14,7 +14,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="flex items-center justify-center px-6 sm:px-10 lg:px-16 bg-gradient-to-b from-orange-50/70 to-orange-25/50"
+      className="flex items-center justify-center px-6 sm:px-10 lg:px-16 bg-black"
       style={{ minHeight: 'calc(100vh - 64px)', marginTop: '64px' }}
       aria-label="Section d'introduction"
     >
@@ -25,7 +25,7 @@ const HeroSection = () => {
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
         {/* Titre principal */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
           Votre site web professionnel
           <br />
           à partir de
@@ -33,7 +33,7 @@ const HeroSection = () => {
         </h1>
 
         {/* Sous-titre */}
-        <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-white max-w-3xl mx-auto mb-12 leading-relaxed">
           Plus besoin de gérer la technique, concentrez-vous sur votre business.
         </p>
 
@@ -52,7 +52,7 @@ const HeroSection = () => {
           <Button
             size="lg"
             variant="outline"
-            className="border-2 border-green-500 text-black hover:bg-green-500 hover:text-white hover:border-green-500 font-semibold px-8 py-4 rounded-md shadow-md transition-all duration-300 flex items-center justify-center"
+            className="border-2 border-green-500 text-white hover:bg-green-500 hover:text-white hover:border-green-500 font-semibold px-8 py-4 rounded-md shadow-md transition-all duration-300 flex items-center justify-center"
             onClick={handleWhatsAppClick}
             aria-label="WhatsApp direct"
           >
@@ -69,7 +69,7 @@ const HeroSection = () => {
           ].map((point, idx) => (
             <motion.div
               key={idx}
-              className="flex items-center justify-center text-center p-4 bg-white/70 rounded-lg border border-gray-200 shadow-sm"
+              className="flex items-center justify-center text-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 + idx * 0.2, duration: 0.6 }}

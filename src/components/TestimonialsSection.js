@@ -21,20 +21,20 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Ce que disent mes clients
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-white max-w-2xl mx-auto">
             Des entrepreneurs satisfaits qui me font confiance.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-gray-50 border-0 hover:shadow-lg transition-shadow duration-300">
+            <Card key={index} className="bg-white border-0 hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-8">
                 <div className="flex items-start mb-4">
                   <Quote className="w-8 h-8 text-orange-500 mr-4 flex-shrink-0" />

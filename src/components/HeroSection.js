@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/button';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import AtoutsCarousel from './AtoutsCarousel'; // Vérifie le chemin
 
 const HeroSection = () => {
   const handleWhatsAppClick = () => {
@@ -14,17 +15,31 @@ const HeroSection = () => {
 
   return (
     <section
-      className="flex items-center justify-center px-6 sm:px-10 lg:px-16 bg-black"
+      className="flex flex-col justify-between px-6 sm:px-10 lg:px-16 bg-black relative overflow-hidden"
       style={{ minHeight: 'calc(100vh - 64px)', marginTop: '64px' }}
       aria-label="Section d'introduction"
     >
+      {/* Overlay texture & glow fintech */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            `radial-gradient(circle at 10% 20%, rgba(255, 140, 0, 0.12), transparent 70%), 
+             radial-gradient(circle at 80% 40%, rgba(0, 255, 200, 0.15), transparent 75%), 
+             radial-gradient(circle at 50% 80%, rgba(255, 140, 0, 0.1), transparent 65%)`,
+          filter: 'blur(60px)',
+          zIndex: 0,
+          mixBlendMode: 'screen',
+        }}
+      />
+
       <motion.div
-        className="w-full max-w-4xl mx-auto text-center"
+        className="w-full max-w-4xl mx-auto text-center flex-grow flex flex-col justify-center relative z-10"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
-        {/* Titre principal */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
           Votre site web professionnel
           <br />
@@ -32,13 +47,11 @@ const HeroSection = () => {
           <span className="text-orange-500"> 95€/mois</span>
         </h1>
 
-        {/* Sous-titre */}
-        <p className="text-base sm:text-lg md:text-xl text-white max-w-3xl mx-auto mb-12 leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-white max-w-3xl mx-auto mb-16 leading-relaxed">
           Plus besoin de gérer la technique, concentrez-vous sur votre business.
         </p>
 
-        {/* Boutons CTA */}
-        <div className="flex flex-col sm:flex-row justify-center gap-5 max-w-2xl mx-auto mb-16">
+        <div className="flex flex-col sm:flex-row justify-center gap-5 max-w-2xl mx-auto">
           <Button
             size="lg"
             className="bg-orange-500 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-md shadow-md transition-colors duration-300 flex items-center justify-center"
@@ -59,27 +72,10 @@ const HeroSection = () => {
             WhatsApp direct
           </Button>
         </div>
-
-        {/* Points forts */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-          {[
-            "Hébergement inclus",
-            "Économie",
-            "Tranquillité d’esprit",
-          ].map((point, idx) => (
-            <motion.div
-              key={idx}
-              className="flex items-center justify-center text-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 + idx * 0.2, duration: 0.6 }}
-            >
-              <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
-              <span className="text-gray-800 font-medium text-lg">{point}</span>
-            </motion.div>
-          ))}
-        </div>
       </motion.div>
+
+      {/* Bande des atouts en full width */}
+      <AtoutsCarousel />
     </section>
   );
 };

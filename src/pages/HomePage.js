@@ -18,8 +18,8 @@ const HomePage = () => {
       <TestimonialsSection />
       <PortfolioSection />
       <ProcessSection />
-      <AboutSection />
       <FAQSection />
+      <AboutSection />
       <Footer />
     </div>
   );

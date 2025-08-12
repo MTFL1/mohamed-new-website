@@ -1,11 +1,11 @@
 import React from 'react';
+import Profil from '../img/profil.webp';
 import { Card, CardContent } from './ui/card';
-import { MapPin, Award, Users, Clock } from 'lucide-react';
+import { MapPin, Award, Clock } from 'lucide-react';
 
 const AboutSection = () => {
   const stats = [
-    { icon: Users, value: "50+", label: "Sites créés" },
-    { icon: Award, value: "5 ans", label: "D'expérience" },
+    { icon: Award, value: "3 ans", label: "D'expérience" },
     { icon: Clock, value: "24h", label: "Temps de réponse" },
     { icon: MapPin, value: "Toulouse", label: "Basé à" }
   ];
@@ -22,13 +22,12 @@ const AboutSection = () => {
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
                 Bonjour ! Je suis <strong>Mohamed</strong>, développeur web freelance basé à <strong>Toulouse</strong>. 
-                Depuis 5 ans, j'aide les entrepreneurs et petites entreprises à développer leur présence en ligne 
+                Depuis 3 ans, j'aide les entrepreneurs et petites entreprises à développer leur présence en ligne 
                 avec des sites web professionnels et performants.
               </p>
               
               <p>
-                Ma philosophie ? <strong>Simplicité et efficacité</strong>. Plutôt que de vous vendre un site cher 
-                que vous devrez maintenir vous-même, je vous propose un service complet en abonnement. 
+                Ma philosophie ? <strong>Simplicité et efficacité</strong>. Je vous propose un service complet en abonnement. 
                 Vous vous concentrez sur votre business, je m'occupe de votre site web.
               </p>
               
@@ -58,9 +57,9 @@ const AboutSection = () => {
             <Card className="bg-white border-0 shadow-xl">
               <CardContent className="p-8">
                 <div className="text-center">
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden ring-4 ring-orange-100">
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden ring-2 ring-orange-500">
                     <img 
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
+                      src={Profil}
                       alt="Mohamed - Développeur Web Freelance"
                       className="w-full h-full object-cover"
                     />
@@ -76,13 +75,13 @@ const AboutSection = () => {
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button 
                       onClick={() => window.open('mailto:atelierdecember@gmail.com', '_self')}
-                      className="flex-1 bg-black text-white px-4 py-2 rounded-lg hover:bg-green-500 transition-colors duration-300 text-sm"
+                      className="flex-1 bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition-colors duration-300 text-sm"
                     >
                       Envoyer un email
                     </button>
                     <button 
                       onClick={() => window.open('https://wa.me/33000000000', '_blank')}
-                      className="flex-1 bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition-colors duration-300 text-sm"
+                      className="flex-1 bg-white text-green-500 border-2 border-green-500 px-4 py-2 rounded-lg hover:bg-green-500 hover:text-white transition-colors duration-300 text-sm"
                     >
                       WhatsApp
                     </button>

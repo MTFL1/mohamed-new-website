@@ -1,6 +1,6 @@
 import React from 'react';
 import { Separator } from './ui/separator';
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,28 +9,23 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Colonne 1 - Branding */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Mohamed.</h3>
+            <h3 className="text-2xl font-bold">Mohamed<span className="text-orange-500">.</span></h3>
             <p className="text-gray-300 leading-relaxed">
               Votre partenaire pour un site web professionnel sans les tracas. 
               Design, développement et maintenance en abonnement mensuel.
             </p>
             <div className="flex space-x-4">
+              
+             
               <a 
-                href="#" 
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors duration-300"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
+                href="https://www.instagram.com/mohamedtfl/" 
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/mohamed-tefili/" 
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors duration-300"
                 aria-label="LinkedIn"
               >
@@ -58,33 +53,21 @@ const Footer = () => {
                   Fonctionnement
                 </a>
               </li>
+               <li>
+                <a href="#faq" className="text-gray-300 hover:text-orange-500 transition-colors">
+                  FAQ
+                </a>
+              </li>
               <li>
                 <a href="#apropos" className="text-gray-300 hover:text-orange-500 transition-colors">
                   À propos
                 </a>
               </li>
-              <li>
-                <a href="#faq" className="text-gray-300 hover:text-orange-500 transition-colors">
-                  FAQ
-                </a>
-              </li>
             </ul>
           </div>
 
-          {/* Colonne 3 - Services */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Services</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li>Sites web responsive</li>
-              <li>Hébergement inclus</li>
-              <li>Nom de domaine</li>
-              <li>Maintenance mensuelle</li>
-              <li>Support technique</li>
-              <li>Optimisation SEO</li>
-            </ul>
-          </div>
 
-          {/* Colonne 4 - Contact */}
+          {/* Colonne 3 - Contact */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Contact</h3>
             <div className="space-y-3">
@@ -145,7 +128,7 @@ const Footer = () => {
 
         <div className="mt-8 text-center">
           <p className="text-gray-500 text-xs">
-            Site créé avec passion à Toulouse 🇫🇷
+            Site créé avec ❤️ à Toulouse 🇫🇷
           </p>
         </div>
       </div>

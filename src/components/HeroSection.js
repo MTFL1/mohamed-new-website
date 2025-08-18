@@ -70,7 +70,7 @@ const HeroSection = () => {
             variants={itemVariants}
             className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-8"
           >
-            <span className="w-2 h-2 bg-orange-500 rounded-full mr-2 animate-pulse"></span>
+            <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
             Solution clé en main
           </motion.div>
 

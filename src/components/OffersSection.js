@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Star, Zap, MessageCircle, X } from 'lucide-react';
 
 const OffersSection = () => {
-  const [selectedOffer, setSelectedOffer] = useState(null);
 
   const handleContactClick = (offerType) => {
     const messages = {

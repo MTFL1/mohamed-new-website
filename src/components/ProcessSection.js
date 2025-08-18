@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent } from './ui/card';
+import { motion } from 'framer-motion';
 import { MessageCircle, Palette, Rocket, HeadphonesIcon } from 'lucide-react';
 
 const ProcessSection = () => {
@@ -8,7 +8,7 @@ const ProcessSection = () => {
       icon: MessageCircle,
       title: "1. Appel découverte",
       description: "Discussion de vos besoins, de votre secteur et de vos objectifs. Totalement gratuit et sans engagement.",
-      duration: "30 min"
+      duration: "15 - 30 min"
     },
     {
       icon: Palette,
@@ -30,66 +30,105 @@ const ProcessSection = () => {
     }
   ];
 
-  return (
-    <section id="fonctionnement" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Comment ça fonctionne ?
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Un processus simple et transparent, de l'idée à la mise en ligne
-          </p>
-        </div>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1, 
+      transition: { staggerChildren: 0.2, delayChildren: 0.1 }
+    }
+  };
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30, scale: 0.9 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      scale: 1, 
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
+  return (
+    <section id="fonctionnement" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+      {/* Effets de fond */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-2xl" />
+      </div>
+
+      <motion.div
+        className="max-w-7xl mx-auto relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        {/* Header */}
+        <motion.div variants={cardVariants} className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-semibold mb-6">
+            <Rocket className="w-4 h-4 mr-2" />
+            Notre processus
+          </div>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+            Comment ça 
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600"> fonctionne</span> ?
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Un parcours simple, transparent et efficace, de l'idée à la mise en ligne.
+          </p>
+        </motion.div>
+
+        {/* Steps Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {steps.map((step, index) => {
             const IconComponent = step.icon;
             return (
-              <Card key={index} className="relative bg-gray-50 border-0 hover:shadow-lg transition-all duration-300 group">
-                <CardContent className="p-6 text-center">
-                  <div className="mb-4 relative">
-                    <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    {index < steps.length - 1 && (
-                      <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gray-200">
-                        <div className="absolute right-0 top-0 w-2 h-2 bg-gray-300 rounded-full transform translate-x-1 -translate-y-0.5"></div>
-                      </div>
-                    )}
-                  </div>
+              <motion.div
+                key={index}
+                variants={cardVariants}
+                className="group relative"
+                whileHover={{ y: -5 }}
+              >
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 h-full hover:bg-white/10 transition-all duration-300 hover:border-orange-500/30 text-center">
                   
-                  <h3 className="text-lg font-bold text-black mb-2">
+                  {/* Icone */}
+                  <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-orange-500/20 text-orange-400 group-hover:scale-110 transition-transform duration-300">
+                    <IconComponent className="w-8 h-8" />
+                  </div>
+
+                  {/* Titre */}
+                  <h3 className="text-lg font-bold text-white mb-3">
                     {step.title}
                   </h3>
-                  
-                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+
+                  {/* Description */}
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed">
                     {step.description}
                   </p>
-                  
-                  <div className="inline-block px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full font-semibold">
+
+                  {/* Badge durée */}
+                  <div className="inline-block px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-medium">
                     {step.duration}
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </motion.div>
             );
           })}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-white max-w-3xl mx-auto mb-6">
-            <strong>Démarrage rapide :</strong> Votre site peut être en ligne en moins de 2 semaines. 
-            Ensuite, profitez d'un service de maintenance sans souci.
-          </p>
-          <button 
+        {/* CTA */}
+        <motion.div variants={cardVariants} className="text-center mt-16">
+          <motion.button
             onClick={() => window.open('https://calendly.com/placeholder', '_blank')}
-            className="bg-white text-black px-8 py-3 rounded-lg hover:bg-green-500 hover:text-white transition-colors duration-300 inline-flex items-center"
+            className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-all duration-300 inline-flex items-center"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
           >
             Commencer maintenant
             <MessageCircle className="w-5 h-5 ml-2" />
-          </button>
-        </div>
-      </div>
+          </motion.button>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

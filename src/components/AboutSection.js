@@ -16,12 +16,12 @@ const AboutSection = () => {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div>
         <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-violet-600">
-          À propos de Mohamed
+          À propos de Mohammed
         </h2>
         
         <div className="space-y-4 text-gray-600 leading-relaxed">
           <p>
-            Bonjour ! Je suis <strong>Mohamed</strong>, développeur web freelance basé à <strong>Toulouse</strong>. 
+            Bonjour ! Je suis <strong>Mohammed</strong>, développeur web freelance basé à <strong>Toulouse</strong>. 
             Depuis 3 ans, j'aide les entrepreneurs et petites entreprises à développer leur présence en ligne 
             avec des sites web professionnels et performants.
           </p>

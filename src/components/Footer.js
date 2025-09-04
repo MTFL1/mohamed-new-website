@@ -35,7 +35,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Colonne 1 - Branding */}
           <motion.div variants={itemVariants} className="space-y-5">
-            <h3 className="text-2xl font-bold">Mohamed<span className="text-orange-500">.</span></h3>
+            <h3 className="text-2xl font-bold">Mohammed<span className="text-orange-500">.</span></h3>
             <p className="text-gray-300 leading-relaxed text-sm">
               Votre partenaire pour un site web professionnel sans tracas.  
               Design, développement et maintenance en abonnement mensuel.
@@ -128,7 +128,7 @@ const Footer = () => {
           className="flex flex-col sm:flex-row justify-between items-center space-y-6 sm:space-y-0 border-t border-white/10 pt-8"
         >
           <div className="text-gray-500 text-sm">
-            © 2025 Mohamed. Tous droits réservés.
+            © 2025 Mohammed. Tous droits réservés.
           </div>
           
           <div className="flex space-x-6 text-sm">

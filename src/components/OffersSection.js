@@ -6,7 +6,7 @@ const OffersSection = () => {
 
   const handleContactClick = (offerType) => {
     const messages = {
-      zen: 'Bonjour, je souhaite en savoir plus sur l\'offre Zen (95€/mois).',
+      zen: 'Bonjour, je souhaite en savoir plus sur l\'offre Zen (49€/mois).',
       starter: 'Bonjour, je souhaite en savoir plus sur l\'offre Starter (995€).'
     };
     window.open(`https://wa.me/33627235976?text=${encodeURIComponent(messages[offerType])}`, '_blank');
@@ -16,7 +16,7 @@ const OffersSection = () => {
     zen: {
       title: "Offre Zen",
       subtitle: "On s'occupe de tout",
-      price: "95€",
+      price: "49€",
       period: "/mois",
       badge: "Populaire",
       description: "Solution complète avec maintenance incluse",
@@ -34,7 +34,7 @@ const OffersSection = () => {
       ],
       highlight: true,
       ctaText: "Choisir l'offre Zen",
-      savings: "Économisez 300€ la première année"
+      savings: "Économisez dès la première année"
     },
     starter: {
       title: "Offre Starter",

@@ -16,13 +16,13 @@ const TestimonialsSection = () => {
       avatar: AntreConnaissance,
       highlight: "identité forte",
       projectType: "Site vitrine associatif",
-      websiteUrl: "#"
+      websiteUrl: "www.lantre-connaissance.com"
     },
     {
       name: "Eddy Cherif",
       business: "Praticien en médecine chinoise",
       location: "Toulouse, France", 
-      content: "J'ai eu l'occasion de faire mon premier site professionnel avec Atelier December. L'accompagnement est top et le résultat correspond parfaitement à mes attentes. Un vrai partenaire pour développer ma présence en ligne !",
+      content: "J'ai eu l'occasion de faire mon premier site professionnel avec Mohammed. L'accompagnement est top et le résultat correspond parfaitement à mes attentes. Un vrai partenaire pour développer ma présence en ligne !",
       rating: 5,
       avatar: Eddy,
       highlight: "accompagnement top",
@@ -30,14 +30,14 @@ const TestimonialsSection = () => {
       websiteUrl: "#"
     },
     {
-      name: "Sarah Martinez",
-      business: "Consultante en communication",
-      location: "Montpellier, France",
-      content: "Un service clé en main exceptionnel ! Mohamed a su traduire parfaitement ma vision en un site moderne et efficace. Les délais ont été respectés et le support technique est irréprochable.",
+      name: "Amine",
+      business: "Enseignant",
+      location: "Toulouse, France",
+      content: "J'avais besoin d'une page vitrine pour présenter mes cours de manière simple et clair, le travail à été rapide et conforme à mes demandes. Je suis satisfait et je recommande.",
       rating: 5,
-      avatar: "", // pas d’image → avatar par défaut
+      avatar: "", 
       highlight: "service clé en main",
-      projectType: "Portfolio professionnel",
+      projectType: "Site professionnel",
       websiteUrl: "#"
     }
   ];

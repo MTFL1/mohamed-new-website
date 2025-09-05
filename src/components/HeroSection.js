@@ -82,7 +82,7 @@ const HeroSection = () => {
             Votre site web professionnel
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
-              à partir de 95€/mois
+              à partir de 49€/mois
             </span>
           </motion.h1>
 

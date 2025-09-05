@@ -1,27 +1,28 @@
 import React from 'react';
 import { Card, CardContent } from './ui/card';
-import NinaCarducci from '../img/NinaCarducci.webp';
 import Eddy from '../img/eddy2.webp';
+import TontonTajwid from '../img/TontonTajwid.webp';
+import HgbbStudio from '../img/HGBB_STUDIO.webp';
 
 const PortfolioSection = () => {
   const projects = [
     {
-      title: "Restaurant Gastronomique",
-      sector: "Restauration",
-      description: "Site vitrine avec système de réservation en ligne",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      title: "HGBB STUDIO",
+      sector: "Boutique de vêtements",
+      description: "Site e-commerce avec catalogue produits",
+      image: HgbbStudio
     },
     {
-      title: "Cabinet de santé",
-      sector: "Professionnel de santé",
+      title: "Cherif Eddy praticien",
+      sector: "Praticien en médecine chinoise",
       description: "Site professionnel avec prise de rendez-vous",
       image: Eddy
     },
     {
-      title: "Portfolio Photographe",
-      sector: "Photographie",
-      description: "Portfolio moderne pour mettre en valeur le travail d’une artiste",
-      image: NinaCarducci
+      title: "Tonton Tajwid",
+      sector: "Enseignement",
+      description: "Présentation des prestations pour un enseignant",
+      image: TontonTajwid
     }
   ];
 

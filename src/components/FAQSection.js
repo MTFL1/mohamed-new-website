@@ -15,7 +15,7 @@ const FAQSection = () => {
     },
     {
       question: "Y a-t-il des frais supplémentaires ?",
-      answer: "Oui, un frais de mise en place unique est à prévoir lors de la commande. Il couvre la configuration initiale (installation technique, paramétrage du domaine, certificat SSL, design personnalisé). Ce frais est facturé une seule fois et permet de lancer votre site dans les meilleures conditions."
+      answer: "Des frais de mise en place unique sont à prévoir et payable une seule fois lors de la commande. D'un montant de 249€, il couvre la configuration initiale (installation technique, paramétrage du domaine, certificat SSL, design personnalisé). Ce frais est facturé une seule fois et permet de lancer votre site dans les meilleures conditions."
     },
     {
       question: "Puis-je arrêter mon abonnement à tout moment ?",

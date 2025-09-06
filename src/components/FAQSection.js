@@ -19,7 +19,7 @@ const FAQSection = () => {
     },
     {
       question: "Puis-je arrêter mon abonnement à tout moment ?",
-      answer: "Oui, nos abonnements sont sans engagement. Vous pouvez arrêter quand vous le souhaitez. Cependant, tant que l’abonnement n’est pas actif, nous assurons l’hébergement, la sécurité et la maintenance de votre site."
+      answer: "Oui, nos abonnements sont sans engagement. Vous pouvez arrêter quand vous le souhaitez. Tant que l’abonnement est pas actif, nous assurons l’hébergement, la sécurité et la maintenance de votre site."
     },
     {
       question: "Combien de temps faut-il pour avoir mon site en ligne ?",

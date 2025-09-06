@@ -192,7 +192,7 @@ const OffersSection = () => {
 
         {/* Mention en bas */}
         <p className="text-center text-sm text-gray-500 mt-10">
-          *Tarifs indiqués toute taxes comprises, hors frais de mise en place uniques (voir FAQ).
+          *Tarifs indiqués TTC, hors frais de mise en place (voir FAQ).
         </p>
       </motion.div>
     </section>

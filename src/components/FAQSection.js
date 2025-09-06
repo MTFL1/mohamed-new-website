@@ -8,44 +8,36 @@ import {
 import { motion } from 'framer-motion';
 
 const FAQSection = () => {
-const faqs = [
-  {
-    question: "Quelle est la différence entre l’Offre Zen et l’Offre One Shot ?",
-    answer: "L’Offre Zen est un abonnement mensuel sans engagement qui inclut tout : hébergement, nom de domaine, mises à jour de sécurité, maintenance et support technique. L’Offre One Shot est un paiement unique pour la création de votre site, avec accompagnement à la mise en ligne et propriété immédiate du site. Vous gérez ensuite l’hébergement et le domaine."
-  },
-  {
-    question: "Pourquoi choisir l’Offre Zen plutôt que l’Offre One Shot ?",
-    answer: "Avec l’Offre Zen, vous n’avez à vous occuper de rien : je gère l’hébergement, le domaine, la sécurité et la maintenance. C’est idéal si vous voulez un site toujours à jour et performant sans avoir à gérer la partie technique."
-  },
-  {
-    question: "Et pourquoi choisir l’Offre One Shot ?",
-    answer: "L’Offre One Shot est parfaite si vous voulez devenir immédiatement propriétaire de votre site et préférez gérer vous-même l’hébergement et le domaine. Vous payez une seule fois et le site est à vous dès la livraison."
-  },
-  {
-    question: "Puis-je arrêter l’Offre Zen à tout moment ?",
-    answer: "L’Offre Zen est sans engagement avec des frais de dossier de 195€. Vous pouvez aussi choisir un engagement de 12 mois sans frais de dossier. Dans les deux cas, la propriété du site vous revient après 12 mois d’abonnement payés."
-  },
-  {
-  question: "Quel type de site puis-je avoir ?",
-  answer: "Vous avez accès à un site vitrine simple et efficace, généralement composé de 4 pages : une page d’accueil, une page présentation de votre activité, une page services ou produits, et une page contact. Ce site est conçu pour présenter votre entreprise de manière claire, professionnelle et accessible sur tous les supports (ordinateur, tablette, mobile)."
-  },
-  {
-    question: "Combien de temps faut-il pour avoir mon site en ligne ?",
-    answer: "En général, entre 7 et 10 jours ouvrés après validation du brief et réception des contenus. Pour l’Offre Zen, je m’occupe aussi de la mise en ligne et de toute la configuration technique."
-  },
-  {
-    question: "Mon site sera-t-il responsive et moderne ?",
-    answer: "Oui, tous les sites sont conçus en mobile-first et optimisés pour s’adapter à tous les écrans, avec un design moderne et des performances optimales."
-  },
-  {
-    question: "Puis-je demander des modifications après la livraison ?",
-    answer: "Avec l’Offre Zen, vous avez droit à 1 mise à jour de contenu gratuite par mois. Pour l’Offre One Shot, un mois de maintenance est inclus après la livraison."
-  },
-  {
-    question: "Proposez-vous des fonctionnalités sur mesure ?",
-    answer: "Oui, je peux intégrer des fonctionnalités spécifiques (boutique en ligne, réservation, formulaires avancés, etc.). Cela se fait sur devis, après étude précise de vos besoins."
-  }
-];
+  const faqs = [
+    {
+      question: "Quelles sont les différences entre vos 3 offres ?",
+      answer: "L’Offre Site Vitrine (49€/mois) est idéale pour présenter votre activité de manière professionnelle (artisans, indépendants, petites entreprises). L’Offre Booking (79€/mois) ajoute un système complet de réservation en ligne (restaurants, hôtels, coiffeurs, coachs, formateurs). L’Offre E-commerce (99€/mois) permet de vendre vos produits en ligne avec gestion des stocks, paiements sécurisés et commandes."
+    },
+    {
+      question: "Y a-t-il des frais supplémentaires ?",
+      answer: "Oui, un frais de mise en place unique est à prévoir lors de la commande. Il couvre la configuration initiale (installation technique, paramétrage du domaine, certificat SSL, design personnalisé). Ce frais est facturé une seule fois et permet de lancer votre site dans les meilleures conditions."
+    },
+    {
+      question: "Puis-je arrêter mon abonnement à tout moment ?",
+      answer: "Oui, nos abonnements sont sans engagement. Vous pouvez arrêter quand vous le souhaitez. Cependant, tant que l’abonnement n’est pas actif, nous assurons l’hébergement, la sécurité et la maintenance de votre site."
+    },
+    {
+      question: "Combien de temps faut-il pour avoir mon site en ligne ?",
+      answer: "En moyenne, il faut entre 7 et 10 jours ouvrés après validation du brief et réception de vos contenus (textes, images, logo)."
+    },
+    {
+      question: "Mon site sera-t-il responsive et moderne ?",
+      answer: "Oui, tous les sites sont conçus en mobile-first, s’adaptent à tous les écrans (ordinateur, tablette, smartphone) et respectent les standards actuels de design."
+    },
+    {
+      question: "Puis-je demander des modifications après la mise en ligne ?",
+      answer: "Oui, vous pouvez demander des modifications ou ajouts. Selon leur ampleur, elles peuvent être incluses dans l’abonnement ou faire l’objet d’un devis complémentaire."
+    },
+    {
+      question: "Proposez-vous des fonctionnalités sur mesure ?",
+      answer: "Oui, il est possible d’ajouter des fonctionnalités spécifiques (formulaires avancés, intégrations externes, systèmes personnalisés). Cela se fait sur devis après étude de vos besoins."
+    }
+  ];
 
   // Animation variant pour l’apparition
   const variants = {
@@ -57,7 +49,7 @@ const faqs = [
    <motion.section 
       id="faq" 
       className="py-20 px-4 sm:px-6 lg:px-8 bg-white"
-    initial="hidden"
+      initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={variants}
@@ -65,10 +57,10 @@ const faqs = [
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-            Encore des questions, on est là pour vous aider.
+            Encore des questions ? On est là pour vous aider.
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Si vous vous posez des questions, on y répond ici !
+            Si vous vous posez une question, vous trouverez sûrement la réponse ici !
           </p>
         </div>
 
@@ -101,7 +93,7 @@ const faqs = [
               Envoyer un email
             </button>
             <button 
-              onClick={() => window.open('https://wa.me/33000000000?text=Bonjour, j\'ai une question sur vos services', '_blank')}
+              onClick={() => window.open('https://wa.me/33627235976?text=Bonjour, j\'ai une question sur vos services', '_blank')}
               className="bg-white text-green-500 border-2 border-green-500 px-6 py-3 rounded-lg hover:bg-green-500 hover:text-white transition-colors duration-300"
             >
               WhatsApp direct

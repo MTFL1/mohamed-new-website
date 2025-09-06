@@ -1,62 +1,81 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, Star, Zap, MessageCircle, X } from 'lucide-react';
+import { Check, Star, Zap, MessageCircle } from 'lucide-react';
 
 const OffersSection = () => {
 
   const handleContactClick = (offerType) => {
     const messages = {
-      zen: 'Bonjour, je souhaite en savoir plus sur l\'offre Zen (49€/mois).',
-      starter: 'Bonjour, je souhaite en savoir plus sur l\'offre Starter (995€).'
+      ecommerce: "Bonjour, je souhaite en savoir plus sur l'offre E-commerce (99€/mois).",
+      vitrine: "Bonjour, je souhaite en savoir plus sur l'offre Site Vitrine (49€/mois).",
+      booking: "Bonjour, je souhaite en savoir plus sur l'offre Booking (79€/mois)."
     };
     window.open(`https://wa.me/33627235976?text=${encodeURIComponent(messages[offerType])}`, '_blank');
   };
 
+  // Ordre : e-commerce | vitrine | booking
   const offers = {
-    zen: {
-      title: "Offre Zen",
-      subtitle: "On s'occupe de tout",
+    
+    vitrine: {
+      title: "Site Vitrine",
+      subtitle: "Présence en ligne professionnelle",
       price: "49€",
       period: "/mois",
       badge: "Populaire",
-      description: "Solution complète avec maintenance incluse",
+      description: "Artisans, indépendants, petites entreprises.",
       features: [
         { text: "Design moderne et responsive", included: true },
-        { text: "Nom de domaine inclus", included: true },
-        { text: "Hébergement sécurisé inclus", included: true },
-        { text: "Certificat SSL gratuit", included: true },
-        { text: "Mises à jour automatiques", included: true },
-        { text: "1 modification/mois incluse", included: true },
-        { text: "Support technique prioritaire", included: true },
-        { text: "Sauvegarde quotidienne", included: true },
+        { text: "Jusqu’à 5 pages incluses", included: true },
+        { text: "Formulaire de contact", included: true },
         { text: "Optimisation SEO de base", included: true },
-        { text: "Propriété après 12 mois", included: true }
+        { text: "Nom de domaine & hébergement inclus", included: true },
+        { text: "Certificat SSL", included: true },
+        { text: "Mises à jour incluses", included: true }
       ],
       highlight: true,
-      ctaText: "Choisir l'offre Zen",
-      savings: "Économisez dès la première année"
+      ctaText: "Choisir l'offre Vitrine"
     },
-    starter: {
-      title: "Offre Starter",
-      subtitle: "Vous gérez l'hébergement",
-      price: "995€",
-      period: "TTC",
+    
+    booking: {
+      title: "Site Booking",
+      subtitle: "Réservations en ligne simplifiées",
+      price: "79€",
+      period: "/mois",
       badge: null,
-      description: "Site professionnel, hébergement à votre charge",
+      description: "Restaurants, hôtels, coiffeurs, coachs, formateurs.",
       features: [
-        { text: "Design moderne et responsive", included: true },
-        { text: "Optimisation SEO de base", included: true },
-        { text: "1 mois de maintenance", included: true },
-        { text: "Formation à la gestion", included: true },
-        { text: "Propriété immédiate", included: true },
-        { text: "Hébergement inclus", included: false },
-        { text: "Nom de domaine inclus", included: false },
-        { text: "Support continu", included: false }
+        { text: "Calendrier de réservation en ligne", included: true },
+        { text: "Paiement ou acompte à la réservation", included: true },
+        { text: "Gestion des disponibilités", included: true },
+        { text: "Notifications par email/SMS", included: true },
+        { text: "Synchronisation Google Calendar", included: true },
+        { text: "Nom de domaine & hébergement inclus", included: true },
+        { text: "Certificat SSL", included: true },
+        { text: "Mises à jour incluses", included: true }
       ],
       highlight: false,
-      ctaText: "Choisir l'offre Starter",
-      note: "Hébergement et domaine à prévoir (~100€/an)"
-    }
+      ctaText: "Choisir l'offre Booking"
+    },
+    ecommerce: {
+      title: "Site E-commerce",
+      subtitle: "Vendez vos produits en ligne",
+      price: "99€",
+      period: "/mois",
+      badge: null,
+      description: "Boutiques, créateurs et commerçants.",
+      features: [
+        { text: "Catalogue produits illimité", included: true },
+        { text: "Paiement en ligne (CB, PayPal, Stripe)", included: true },
+        { text: "Gestion des stocks & commandes", included: true },
+        { text: "Click & Collect ou Livraison", included: true },
+        { text: "Emails automatiques clients", included: true },
+        { text: "Nom de domaine & hébergement inclus", included: true },
+        { text: "Certificat SSL", included: true },
+        { text: "Mises à jour incluses", included: true }
+      ],
+      highlight: false,
+      ctaText: "Choisir l'offre E-commerce"
+    },
   };
 
   const containerVariants = {
@@ -92,23 +111,23 @@ const OffersSection = () => {
         <motion.div variants={cardVariants} className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold mb-6">
             <Zap className="w-4 h-4 mr-2" />
-            Offres simplifiées
+            Nos offres mensuelles
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Choisissez votre formule
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Flexibilité totale ou gestion complète, nous nous adaptons à vos besoins et votre budget.
+            Abonnements tout compris : visibilité, vente en ligne ou réservations.
           </p>
         </motion.div>
 
-        {/* Comparison Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto pt-6">
+        {/* Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto pt-6">
           {Object.entries(offers).map(([key, offer]) => (
             <motion.div
               key={key}
               variants={cardVariants}
-              className={`relative bg-white rounded-2xl shadow-lg overflow-visible transition-all duration-300 hover:shadow-xl ${
+              className={`relative bg-white rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl ${
                 offer.highlight 
                   ? 'border-2 border-orange-500 scale-105 z-10' 
                   : 'border border-gray-200 hover:border-orange-300'
@@ -125,7 +144,7 @@ const OffersSection = () => {
                 </div>
               )}
 
-                              <div className="p-8 pt-12">
+              <div className="p-8 pt-12">
                 {/* Header */}
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{offer.title}</h3>
@@ -137,16 +156,6 @@ const OffersSection = () => {
                       <span className="text-5xl font-bold text-orange-600">{offer.price}</span>
                       <span className="text-gray-500 text-lg ml-2">{offer.period}</span>
                     </div>
-                    {offer.savings && (
-                      <div className="text-green-600 font-semibold text-sm mt-2">
-                        {offer.savings}
-                      </div>
-                    )}
-                    {offer.note && (
-                      <div className="text-gray-500 text-sm mt-2">
-                        {offer.note}
-                      </div>
-                    )}
                   </div>
                   
                   <p className="text-gray-600 text-sm">{offer.description}</p>
@@ -156,21 +165,13 @@ const OffersSection = () => {
                 <div className="space-y-3 mb-8">
                   {offer.features.map((feature, index) => (
                     <div key={index} className="flex items-start">
-                      {feature.included ? (
-                        <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                      ) : (
-                        <X className="w-5 h-5 text-gray-400 mr-3 flex-shrink-0 mt-0.5" />
-                      )}
-                      <span className={`text-sm ${
-                        feature.included ? 'text-gray-700' : 'text-gray-400 line-through'
-                      }`}>
-                        {feature.text}
-                      </span>
+                      <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-gray-700">{feature.text}</span>
                     </div>
                   ))}
                 </div>
 
-                {/* CTA Button */}
+                {/* CTA */}
                 <motion.button
                   onClick={() => handleContactClick(key)}
                   className={`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-300 flex items-center justify-center group ${
@@ -184,43 +185,15 @@ const OffersSection = () => {
                   <MessageCircle className="w-5 h-5 mr-2" />
                   {offer.ctaText}
                 </motion.button>
-
-                {/* Secondary CTA for highlighted offer */}
-                {offer.highlight && (
-                  <div className="text-center mt-4">
-                    <button
-                      onClick={() => window.open('tel:+33627235976', '_self')}
-                      className="text-orange-600 hover:text-orange-700 text-sm font-medium transition-colors"
-                    >
-                      Ou appelez directement : 06 27 23 59 76
-                    </button>
-                  </div>
-                )}
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <motion.div 
-          variants={cardVariants}
-          className="text-center mt-16 p-8 bg-white rounded-2xl shadow-lg border border-gray-200"
-        >
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Pas sûr de votre choix ?
-          </h3>
-          <p className="text-gray-600 mb-6">
-            Discutons de vos besoins lors d'un appel gratuit de 15 minutes
-          </p>
-          <motion.button
-            onClick={() => window.open('https://calendly.com/placeholder', '_blank')}
-            className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Réserver un appel gratuit
-          </motion.button>
-        </motion.div>
+        {/* Mention en bas */}
+        <p className="text-center text-sm text-gray-500 mt-10">
+          *Tarifs indiqués toute taxes comprises, hors frais de mise en place uniques (voir FAQ).
+        </p>
       </motion.div>
     </section>
   );

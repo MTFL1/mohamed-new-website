@@ -158,17 +158,6 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        {/* CTA */}
-        <motion.div variants={cardVariants} className="text-center mt-16">
-          <motion.button
-            onClick={() => window.open('https://wa.me/33627235976?text=Bonjour, je souhaite voir des exemples de vos réalisations', '_blank')}
-            className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-all duration-300"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Voir plus de réalisations
-          </motion.button>
-        </motion.div>
       </motion.div>
     </section>
   );

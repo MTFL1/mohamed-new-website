@@ -47,7 +47,6 @@ const OffersSection = () => {
         { text: "Calendrier de réservation en ligne", included: true },
         { text: "Paiement ou acompte à la réservation", included: true },
         { text: "Gestion des disponibilités", included: true },
-        { text: "Notifications par email/SMS", included: true },
         { text: "Synchronisation Google Calendar", included: true },
         { text: "Nom de domaine & hébergement inclus", included: true },
         { text: "Certificat SSL", included: true },
@@ -64,11 +63,9 @@ const OffersSection = () => {
       badge: null,
       description: "Boutiques, créateurs et commerçants.",
       features: [
-        { text: "Catalogue produits illimité", included: true },
+        { text: "Catalogue produits", included: true },
         { text: "Paiement en ligne (CB, PayPal, Stripe)", included: true },
         { text: "Gestion des stocks & commandes", included: true },
-        { text: "Click & Collect ou Livraison", included: true },
-        { text: "Emails automatiques clients", included: true },
         { text: "Nom de domaine & hébergement inclus", included: true },
         { text: "Certificat SSL", included: true },
         { text: "Mises à jour incluses", included: true }

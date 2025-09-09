@@ -42,8 +42,9 @@ const OffersSection = () => {
       price: "79€",
       period: "/mois",
       badge: null,
-      description: "Restaurants, hôtels, coiffeurs, coachs, formateurs.",
+      description: "Restaurants, hôtels, médecins, formateurs.",
       features: [
+        { text: "Design moderne et responsive", included: true },
         { text: "Calendrier de réservation en ligne", included: true },
         { text: "Paiement ou acompte à la réservation", included: true },
         { text: "Gestion des disponibilités", included: true },
@@ -63,6 +64,7 @@ const OffersSection = () => {
       badge: null,
       description: "Boutiques, créateurs et commerçants.",
       features: [
+        { text: "Design moderne et responsive", included: true },
         { text: "Catalogue produits", included: true },
         { text: "Paiement en ligne (CB, PayPal, Stripe)", included: true },
         { text: "Gestion des stocks & commandes", included: true },

@@ -48,7 +48,6 @@ const OffersSection = () => {
         { text: "Calendrier de réservation en ligne", included: true },
         { text: "Paiement ou acompte à la réservation", included: true },
         { text: "Gestion des disponibilités", included: true },
-        { text: "Synchronisation Google Calendar", included: true },
         { text: "Nom de domaine & hébergement inclus", included: true },
         { text: "Certificat SSL", included: true },
         { text: "Mises à jour incluses", included: true }
